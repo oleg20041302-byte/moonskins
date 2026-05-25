@@ -52,7 +52,7 @@ export default function MoonSkins() {
     },
   }
 
-  const t = translations[language]
+  const t = translations[language as keyof typeof translations]
 
   const skins = [
     {
