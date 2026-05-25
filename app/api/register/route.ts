@@ -16,7 +16,7 @@ export async function POST(req: Request) {
       await mongoose.connect(process.env.MONGODB_URI!)
     }
 
-    const existingUser = await User.findOne({ email })
+    const existingUser = await (User as any).findOne({ email })
 
     if (existingUser) {
       return NextResponse.json({
@@ -27,7 +27,7 @@ export async function POST(req: Request) {
 
     const hashedPassword = await bcrypt.hash(password, 10)
 
-    const user = await User.create({
+   const user = await (User as any).create({
       username,
       email,
       password: hashedPassword,
