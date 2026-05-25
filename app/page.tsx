@@ -87,7 +87,7 @@ export default function MoonSkins() {
     },
   ]
 
-  const toggleSkin = (index) => {
+  const toggleSkin = (index: number) => {
     if (selectedSkins.includes(index)) {
       setSelectedSkins(selectedSkins.filter((item) => item !== index))
     } else {
