@@ -6,7 +6,7 @@ import { Moon, Search } from "lucide-react"
 export default function MoonSkins() {
   const [currency, setCurrency] = useState('RUB')
   const [language, setLanguage] = useState('RU')
-  const [selectedSkins, setSelectedSkins] = useState([])
+  const [selectedSkins, setSelectedSkins] = useState<number[]>([])
   const [selectedPayment, setSelectedPayment] = useState('VISA')
 
   const currencies = {
